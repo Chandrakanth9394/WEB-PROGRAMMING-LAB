@@ -1,0 +1,21 @@
+.b{
+    background-image: url(a.jpg);
+}
+.para{
+    font-size: larger;
+    font-style: oblique;
+    font-variant: small-caps;
+    margin-left: auto;
+}
+.main{
+    background-size: auto;   
+}
+.h{
+    text-align: center;
+    text-decoration: cornsilk;
+    text-emphasis: none;
+    text-shadow: crimson;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    border: blue;   
+}
