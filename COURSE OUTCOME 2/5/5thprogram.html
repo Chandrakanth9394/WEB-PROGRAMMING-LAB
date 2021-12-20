@@ -1,0 +1,36 @@
+<!--Create a HTML page to display a new image and text when the mouse comes over 
+the existing content in the page using JavaScript Event Handling. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover</title>
+</head>
+<body align="center">
+    <h1 id="hello"> <b> WELCOME TO WEB PROGRAMING </b> </h1>
+     <img src="E:\chandraknth mca1st\CHANDRAKANTH_HTML\COURSE OUTCOME 2\instagram.jpg" height="20%" width="30%" id="hai">
+</body>
+<script>
+    document.getElementById("hai").onmouseover = function()
+    {
+        mouseover()
+    };
+    document.getElementById("hai").onmouseout = function()
+    {
+        mouseout()
+    };
+    function mouseover()
+    {
+        document.getElementById("hello").innerHTML = "IMAGE AND TEXT";
+        document.getElementById("hai").src ="E:\\chandraknth mca1st\\CHANDRAKANTH_HTML\\COURSE OUTCOME 2\\whatsup.png";
+    }
+    function mouseout()
+    {
+        document.getElementById("hello").innerHTML = "WELCOME TO WEB PROGRAMING";
+        document.getElementById("hai").src ="E:\\chandraknth mca1st\\CHANDRAKANTH_HTML\\COURSE OUTCOME 2\\instagram.jpg"
+    }
+</script>
+</html>

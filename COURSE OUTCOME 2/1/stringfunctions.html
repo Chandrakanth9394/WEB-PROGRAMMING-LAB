@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>string</title>
+        <script>
+            function indexpos()
+            {
+                str1=document.getElementById("str1").value;
+                se=document.getElementById("s").value;
+                ind=str1.indexOf(se);
+                document.getElementById("r1").value=ind;
+            }
+            function lenstr()
+            {
+                str2=document.getElementById("str2").value;
+                le=str2.length;
+                document.getElementById("r2").value=le;
+            }
+            function replacestr()
+            {
+                str3=document.getElementById("str3").value;
+                re=document.getElementById("r").value;
+                ne=document.getElementById("n").value;
+                strn=str3.replace(re,ne);
+                document.getElementById("r3").value=strn;
+            }
+            function slicestr()
+            {
+                str4=document.getElementById("str4").value;
+                n1=document.getElementById("n1").value;
+                n2=document.getElementById("n2").value;
+                sl=str4.slice(n1,n2);
+                document.getElementById("r4").value=sl;
+
+            }
+            function substring1()
+            {
+                str5=document.getElementById("str5").value;
+                n3=document.getElementById("n3").value;
+                n4=document.getElementById("n4").value;
+                sl=str5.substring(n3,n4);
+                document.getElementById("r5").value=sl;
+
+            }
+            function substr1()
+            {
+                str6=document.getElementById("str6").value;
+                n5=document.getElementById("n5").value;
+                n6=document.getElementById("n6").value;
+                sub=str6.substr(n5,n6);
+                document.getElementById("r6").value=sub;
+
+            }
+            function upperstr()
+            {
+                str7=document.getElementById("str7").value;
+                upp=str7.toUpperCase();
+                document.getElementById("r7").value=upp;
+            }
+            function lowerstr()
+            {
+                str8=document.getElementById("str8").value;
+                low=str8.toLowerCase();
+                document.getElementById("r8").value=low;
+            }
+            function charpos()
+            {
+                str9=document.getElementById("str9").value;
+                pos=document.getElementById("p").value;
+                ca=str9.charAt(pos);
+                document.getElementById("r9").value=ca;
+
+            }
+            function charcodepos()
+            {
+                str10=document.getElementById("str10").value;
+                pos=document.getElementById("cp").value;
+                cca=str10.charCodeAt(pos);
+                document.getElementById("r10").value=cca;
+
+            }
+            function concatstr()
+            {
+                str11=document.getElementById("str11").value;
+                s=document.getElementById("s11").value;
+                con=str11.concat(" ",s);
+                document.getElementById("r11").value=con;
+            }
+            function revstr()
+            {
+                str13=document.getElementById("str13").value;
+                re=str13.split('').reverse().join('');
+                document.getElementById("r13").value=re;
+
+            }
+
+        </script>
+        </head>
+        <body>
+            <h1 style="text-align: center;">STRING FUNCTION'S </h1>
+            <br>
+            <div style="margin-left: 200px;">
+                <table cellpadding ="10px" style="background-color: rgb(186, 207, 199);">
+                    <tr>
+                        <th><input type="text" id="str1" placeholder="Enter your string"></th>
+                        <th><input type="text" id="s" placeholder="Enter character to be searched"></th>
+                        <th><input type="text" id="r1" placeholder="Result"></th>
+                        <th><input type="button" id="index" onclick="indexpos()" value="IndexOf"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str2" placeholder="Enter your string"></th>
+                        <th><input type="text" id="r2" placeholder="Result"></th>
+                        <th><input type="button" id="len" onclick="lenstr()" value="Length"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str3" placeholder="Enter your string"></th>
+                        <th><input type="text" id="r" placeholder="Enter word  to be replaced"></th>
+                        <th><input type="text" id="n" placeholder="Enter the new word"></th>
+                        <th><input type="text" id="r3" placeholder="Result"></th>
+                        <th><input type="button" id="repl" onclick="replacestr()" value="replace"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str4" placeholder="Enter your string"></th>
+                        <th><input type="number" id="n1" placeholder="start position"></th>
+                        <th><input type="number" id="n2" placeholder="end position"></th>
+                        <th><input type="text" id="r4" placeholder="Result"></th>
+                        <th><input type="button" id="sli" onclick="slicestr()" value="slice"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str5" placeholder="Enter your string"></th>
+                        <th><input type="number" id="n3" placeholder="start position"></th>
+                        <th><input type="number" id="n4" placeholder="end position"></th>
+                        <th><input type="text" id="r5" placeholder="Result"></th>
+                        <th><input type="button" id="sub" onclick="substring1()" value="substring"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str6" placeholder="Enter your string"></th>
+                        <th><input type="number" id="n5" placeholder="start position"></th>
+                        <th><input type="number" id="n6" placeholder="number of elements"></th>
+                        <th><input type="text" id="r6" placeholder="Result"></th>
+                        <th><input type="button" id="subst" onclick="substr1()" value="substr"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str7" placeholder="Enter your string"></th>
+                        <th><input type="text" id="r7" placeholder="Result"></th>
+                        <th><input type="button" id="up" onclick="upperstr()" value="Upper Case"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str8" placeholder="Enter your string"></th>
+                        <th><input type="text" id="r8" placeholder="Result"></th>
+                        <th><input type="button" id="low" onclick="lowerstr()" value="Lower Case"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str9" placeholder="Enter your string"></th>
+                        <th><input type="text" id="p" placeholder="Enter position of character"></th>
+                        <th><input type="text" id="r9" placeholder="Result"></th>
+                        <th><input type="button" id="ca" onclick="charpos()" value="charAt"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str10" placeholder="Enter your string"></th>
+                        <th><input type="text" id="cp" placeholder="Enter position of character"></th>
+                        <th><input type="text" id="r10" placeholder="Result"></th>
+                        <th><input type="button" id="cca" onclick="charcodepos()" value="charCodeAt"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str11" placeholder="Enter your string"></th>
+                        <th><input type="text" id="s11" placeholder="Enter second string"></th>
+                        <th><input type="text" id="r11" placeholder="Result"></th>
+                        <th><input type="button" id="conc" onclick="concatstr()" value="concat"></th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" id="str13" placeholder="Enter your string"></th>
+                        <th><input type="text" id="r13" placeholder="Result"></th>
+                        <th><input type="button" id="rev" onclick="revstr()" value="reverse"></th>
+                    </tr>
+
+</table>
+</form>
+        </body>
+        </html>

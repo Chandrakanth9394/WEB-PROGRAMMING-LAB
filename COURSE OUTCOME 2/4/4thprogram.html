@@ -1,0 +1,18 @@
+<!--Evaluating JavaScript Event Handling for every click of a button to change the 
+background color of a HTML page -->
+
+<html>
+<html>
+<head>
+    <title>Rand colour</title>
+</head>
+<body id="a">
+    <input type="Button" onclick="color()" value="click">
+    <script>
+        function color(){
+            a1="#" + ((1<<24)*Math.random() | 0).toString(16);
+            document.getElementById("a").style.backgroundColor=a1;
+        }
+    </script>
+</body>
+</html>
