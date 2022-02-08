@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's name</title>
+</head>
+<body>
+<?php
+$students=array("Fathima","Afeef","Don","Arjun","Stefi","Sreelaya","Adarsh","Arun","Marvin","Kannan","Chandrakanth","Dwany","Binoy","Joyal","Jeslin");
+asort($students);
+echo "<h1>The array sorted using asort function</h1><br>";
+print_r($students);
+echo"<br>";
+arsort($students);
+echo"<h1>The array sorted using arsort function</h1><br>";
+print_r($students);
+?>
+</body>
+</html>
