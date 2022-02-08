@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <script>
+   function validateform() {
+      var name=document.myform.name.value;
+      var password=document.myform.password.value;
+      var cp=document.myform.password.value;
+      var address=document.myform.address.value;
+      if(name==null|| name=='') {
+        alert("Name box not be empty")
+        document.myform.name.focus();
+        return false;
+        
+      }
+       else if(password.length<5) {
+        alert('password must be atleast 5 charecters and need not be empty')
+        document.myform.password.focus();
+        
+        
+    return false;
+
+      }else if(cp!=password)
+      {
+        alert("confirm password must be same as password")
+        document.myform.cp.focus();
+        return false;
+      }
+      else if(address==null|| address==''){
+        alert("Address box not be empty")
+        document.myform.address.focus();
+        return false;
+      }
+       
+}
+</script>
+
+  
+<body style="background-color:rgb(84, 230, 116);">
+  
+<form action="" name="myform" method="POST" onsubmit="return validateform()">
+  <table align="center"> 
+
+<tr><th><label style="color:rgb(10, 10, 10);">NAME:</label></th><th><input type="text" name="name" autofocus="required" ></label></th></tr>
+<tr><th><label  style="color:rgb(10, 10, 10);">PASSWORD:</th><th><input type="password" name="password"autofocus="required"></label></th></tr>
+<tr> <th><label  style="color:rgb(10, 10, 10);"></label>CONFIRM PASSWORD:</th><th><input type="password" name="cp" autofocus="required"></label></th></tr>
+<tr><th><label  style="color:rgb(10, 10, 10);">ADDRESS:</th><th><textarea name="address" rows="4"placeholder="must enter your pincode"autofocus="required"></textarea></th></tr>
+<tr> <th><button type="submit">Register</button></ul></table></form></body></th></tr>
+</html>
