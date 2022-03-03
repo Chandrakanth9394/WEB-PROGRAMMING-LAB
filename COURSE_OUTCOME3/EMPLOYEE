@@ -37,7 +37,7 @@
     <table align="center" border="1">
         <tr>
             <td>Enter the employe name: </td>
-            <td><input type="text" name="employe" placeholder="enter the book title" ></td>
+            <td><input type="text" name="employe" placeholder="enter the employe name" ></td>
         </tr>
     <br>
     <tr>
@@ -55,7 +55,7 @@
      $job_name=$_POST['c'];
      $manager_id=$_POST['d'];
      $salary=$_POST['e'];
-     $conn=mysqli_connect("localhost","root","","MCA");
+     $conn=mysqli_connect("localhost","root","","mca");
      if ($conn) 
        {
           echo "connected  successfully<br>";
@@ -65,7 +65,7 @@
            echo "not connected";  
        } 
       $query="INSERT INTO employe(empid,empname,jobname,managerid,salary)VALUES('$employe_id','$employe_name','$job_name','$manager_id','$salary')";
-      if(mysqli_query($conn,"$query"))
+      if(mysqli_query($conn,$query))
         {
             echo "query connection successfull<br>";
         }
@@ -80,10 +80,16 @@
     if (isset($_POST['search']))
       {
        $employe=$_POST['employe']; 
-       $conn=mysqli_connect("localhost","root","","MCA");
+       $conn=mysqli_connect("localhost","root","","mca");
        $search="SELECT * FROM employe where salary>35000 ";
        $result=mysqli_query($conn,"$search");
        echo "<table border =1 >";
+       echo '<tr><th>employeeid</th>
+       <th>employe name</th>
+       <th>jobname</th>
+       <th>managerid</th>
+       <th>salary</th>
+       </tr>';
         while($res=mysqli_fetch_assoc($result))
           {
             echo '<tr>
@@ -97,4 +103,3 @@
           echo "</table>";
       }
       ?>
-
